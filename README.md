@@ -20,3 +20,6 @@ System to approve the operation of message sending bots for Telegram.
 
 [FAVICON GENERATOR](https://favicon.io/favicon-converter/)
 
+## On Vercel
+
+[Test on Vercel](https://telegram-send-message.vercel.app/)
