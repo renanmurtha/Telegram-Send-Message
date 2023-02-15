@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homolog Bot for Telegram</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
@@ -22,21 +28,15 @@
                 <img class="d-block mx-auto mb-4" src="/img/logo/robot.svg" alt="" width="72" height="57">
                 <h2>Homolog Bot</h2>
                 <p class="lead">Sistema para homologar o funcionamento de bots de envio de mensagem para o Telegram.</p>
-              </div>
+            </div>
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-6">
-                    <label for="idBot" class="form-label">ID do Seu bot telegram</label>
+                    <label for="idBot" class="form-label">Telegram Bot ID</label>
                     <input type="text" class="form-control" id="idBot" name="idBot" required>
-                    <div class="invalid-feedback">
-                        ID bot telegram é obrigatorio.
-                    </div>
                 </div>
                 <div class="col-md-6">
                     <label for="chat_id" class="form-label">Chat ID</label>
                     <input type="text" class="form-control" id="chat_id" name="chat_id" required>
-                    <div class="invalid-feedback">
-                        chat_id obrigatorio.
-                    </div>
                 </div>
 
                 <div class="input-group mb-3">
@@ -44,9 +44,6 @@
                         aria-describedby="button-send" required>
                     <button class="btn btn-secondary" type="button" id="button-send"
                         onclick="prepareMessage()">Enviar</button>
-                    <div class="invalid-feedback">
-                        Mensagem obrigatoria.
-                    </div>
                 </div>
             </form>
             <span id="form-response" class="form-text"></span>
@@ -55,9 +52,10 @@
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2017–2022 Renan Murtha</p>
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="https://github.com/renanmurtha">Github</a></li>
+            <li class="list-inline-item"><a href="https://github.com/renanmurtha">Github</a></li>
+            <li class="list-inline-item"><a href="https://telegram-send-message.vercel.app/">On Vercel</a></li>
         </ul>
-      </footer>  
+    </footer>
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
