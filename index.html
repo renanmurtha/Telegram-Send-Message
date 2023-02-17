@@ -32,7 +32,7 @@
 
 <body>
     <main>
-        <div class="container py-3">
+        <div class="container py-1">
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/img/logo/robot.svg" alt="" width="72" height="57">
                 <h2>Homolog Bot</h2>
@@ -47,32 +47,33 @@
                     <label for="chat_id" class="form-label">Chat ID</label>
                     <input type="text" class="form-control" id="chat_id" name="chat_id" required>
                 </div>
-
-                <div class="input-group mb-3">
+                <div class="col-md-6">
                     <input type="text" class="form-control" placeholder="Mensagem / Message" id="message" name="message"
                         required>
-                    <button class="btn btn-primary" type="button" id="button-send" data-bs-toggle="tooltip"
-                        data-bs-placement="left" data-bs-title="Preencha todos os campos / Fill in all fields"
-                        onclick="prepareMessage()">Send Message</button>
-
-                    <button class="btn btn-warning" type="button" id="button-updates" data-bs-toggle="tooltip"
-                        data-bs-placement="left"
-                        data-bs-title="Obrigatório: Somente 'Telegram Bot ID' / Required: Only 'Telegram Bot ID'"
-                        onclick="prepareGetUpdates()">Get Updates</button>
-
-                    <button class="btn btn-light" type="button" id="button-copy" data-bs-toggle="tooltip"
-                        data-bs-placement="left" 
-                        data-bs-title="Copiar / Copy" 
-                        disabled 
-                        onclick="copy()">Copiar / Copy</button>
                 </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <button class="btn btn-primary" type="button" id="button-send" data-bs-toggle="tooltip"
+                            data-bs-placement="left" data-bs-title="Preencha todos os campos / Fill in all fields"
+                            onclick="prepareMessage()">Send Message</button>
+
+                        <button class="btn btn-warning" type="button" id="button-updates" data-bs-toggle="tooltip"
+                            data-bs-placement="left"
+                            data-bs-title="Obrigatório: Somente 'Telegram Bot ID' / Required: Only 'Telegram Bot ID'"
+                            onclick="prepareGetUpdates()">Get Updates</button>
+
+                        <button class="btn btn-light" type="button" id="button-copy" data-bs-toggle="tooltip"
+                            data-bs-placement="left" data-bs-title="Copiar / Copy" disabled onclick="copy()">Copiar /
+                            Copy</button>
+                    </div>
+                </div>
+
             </form>
-            <pre>
-                <span id="form-response" class="form-text"></span>
-            </pre>
+            </br>
+            <pre> <span id="form-response" class="form-text"></span>  </pre>
         </div>
     </main>
-    <footer class="my-5 pt-5 text-muted text-center text-small">
+    <footer class="my-2 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2017–2022 Renan Murtha</p>
         <ul class="list-inline">
             <li class="list-inline-item"><a href="https://github.com/renanmurtha/Telegram-Send-Message">Github</a></li>
