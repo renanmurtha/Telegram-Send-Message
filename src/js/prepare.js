@@ -13,10 +13,16 @@ const errorMensagem = "Preencha todos os campos / Fill in all fields"
 
 function prepareMessage() {
     responseSpan = document.getElementById("form-response");
+    responseSpan.style.fontSize = "20px"
+    
     botHomologacao = document.getElementById('idBot');
     chat_id = document.getElementById('chat_id');
     mensagem = document.getElementById('message');
-    responseSpan.style.fontSize="20px"
+
+    let btnCopy = document.getElementById("button-copy");
+    btnCopy.disabled = true;
+    btnCopy.className = "btn btn-light";
+    
     if (botHomologacao.value.trim() == "" || botHomologacao.value.trim() == null || botHomologacao.value.trim() == undefined) {
         botHomologacao.focus();
         responseSpan.innerHTML = errorMensagem
@@ -37,6 +43,11 @@ function prepareMessage() {
 }
 
 function prepareGetUpdates() {
+
+    let btnCopy = document.getElementById("button-copy");
+    btnCopy.disabled = true;
+    btnCopy.className = "btn btn-light";
+
     responseSpan = document.getElementById("form-response");
     botHomologacao = document.getElementById('idBot');
     if (botHomologacao.value.trim() == "" || botHomologacao.value.trim() == null || botHomologacao.value.trim() == undefined) {

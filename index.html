@@ -15,7 +15,7 @@
 
     <title>Homolog Bot for Telegram</title>
 
-    
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -27,6 +27,7 @@
     <script src="src/js/send-message.js"></script>
     <script src="src/js/get-updates.js"></script>
     <script src="src/js/isNull.js"></script>
+    <script src="src/js/copy-to-clipbord.js"></script>
 </head>
 
 <body>
@@ -48,15 +49,22 @@
                 </div>
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Mensagem / Message" id="Message" name="message"
-                        aria-describedby="button-send" required>
+                    <input type="text" class="form-control" placeholder="Mensagem / Message" id="message" name="message"
+                        required>
                     <button class="btn btn-primary" type="button" id="button-send" data-bs-toggle="tooltip"
-                        data-bs-placement="left" data-bs-title="Preencha todos os campos / Fill in all fields" onclick="prepareMessage()">Send
-                        Message</button>
+                        data-bs-placement="left" data-bs-title="Preencha todos os campos / Fill in all fields"
+                        onclick="prepareMessage()">Send Message</button>
 
                     <button class="btn btn-warning" type="button" id="button-updates" data-bs-toggle="tooltip"
-                        data-bs-placement="left" data-bs-title="Obrigatório: Somente 'Telegram Bot ID' / Required: Only 'Telegram Bot ID'"
+                        data-bs-placement="left"
+                        data-bs-title="Obrigatório: Somente 'Telegram Bot ID' / Required: Only 'Telegram Bot ID'"
                         onclick="prepareGetUpdates()">Get Updates</button>
+
+                    <button class="btn btn-light" type="button" id="button-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="left" 
+                        data-bs-title="Copiar / Copy" 
+                        disabled 
+                        onclick="copy()">Copiar / Copy</button>
                 </div>
             </form>
             <pre>
@@ -75,14 +83,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
-        <script>
-            const buttonSend = document.getElementById('button-send')
-            const buttonUpdates = document.getElementById('button-updates')
-            new bootstrap.Tooltip(buttonSend)
-            new bootstrap.Tooltip(buttonUpdates)
-        </script>
+    <script>
+        const buttonSend = document.getElementById('button-send')
+        const buttonUpdates = document.getElementById('button-updates')
+        const buttonCopy = document.getElementById('button-copy')
+        new bootstrap.Tooltip(buttonSend)
+        new bootstrap.Tooltip(buttonUpdates)
+        new bootstrap.Tooltip(buttonCopy)
+    </script>
 </body>
 
 </html>
