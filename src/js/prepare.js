@@ -9,7 +9,7 @@ let responseSpan = null
 var botHomologacao = null
 var chat_id = null
 var mensagem = null
-const errorMensagem = "Preencha todos os campos / Fill in all fields"
+const errorMensagem = "Fill in all fields  "
 
 function prepareMessage() {
     responseSpan = document.getElementById("form-response");
@@ -50,7 +50,7 @@ function prepareGetUpdates() {
 
     responseSpan = document.getElementById("form-response");
     responseSpan.style.fontSize = "20px"
-    
+
     botHomologacao = document.getElementById('idBot');
     if (botHomologacao.value.trim() == "" || botHomologacao.value.trim() == null || botHomologacao.value.trim() == undefined) {
         botHomologacao.focus();
