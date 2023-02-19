@@ -36,47 +36,92 @@
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/img/logo/robot.svg" alt="" width="72" height="57">
                 <h2>Homolog Bot</h2>
-                <p class="lead">Sistema para homologar o funcionamento de bots de envio de mensagem para o Telegram.</p>
+                <p class="lead">System to approve the operation of message sending bots for TELEGRAM.</p>
             </div>
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-6">
-                    <label for="idBot" class="form-label">Telegram Bot ID</label>
-                    <input type="text" class="form-control" id="idBot" name="idBot" required>
+                    <label for="idBot" class="form-label">BOT TOKEN</label>
+                    <input type="text" class="form-control" id="idBot" name="idBot"
+                        placeholder="Your bot token (Exemple: 4839574812:AAFD39kkdpWt3ywyRZer ....)" required>
+                    <p class="card-text">
+                        <a href="#" class="stretched-link text-danger" style="position: relative;"
+                            data-bs-toggle="modal" data-bs-target="#newbot">Tutorial:
+                            Creating your new bot</a>
+                    </p>
                 </div>
                 <div class="col-md-6">
                     <label for="chat_id" class="form-label">Chat ID</label>
-                    <input type="text" class="form-control" id="chat_id" name="chat_id" required>
+                    <input type="text" class="form-control" id="chat_id" name="chat_id"
+                        placeholder="Chat ID our Group ID" required>
+                    <p class="card-text">
+                        <a href="#" class="stretched-link text-danger" style="position: relative;"
+                            data-bs-toggle="modal" data-bs-target="#getUpdates">Tutorial:
+                            get Chat ID or Group ID</a>
+                    </p>
                 </div>
                 <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Mensagem / Message" id="message" name="message"
+                    <input type="text" class="form-control" placeholder="Your test message" id="message" name="message"
                         required>
                 </div>
                 <div class="col-md-6">
                     <div class="input-group">
                         <button class="btn btn-primary" type="button" id="button-send" data-bs-toggle="tooltip"
-                            data-bs-placement="left" data-bs-title="Preencha todos os campos / Fill in all fields"
+                            data-bs-placement="left" data-bs-title="Fill in all fields"
                             onclick="prepareMessage()">Send Message</button>
 
                         <button class="btn btn-warning" type="button" id="button-updates" data-bs-toggle="tooltip"
                             data-bs-placement="left"
-                            data-bs-title="Obrigatório: Somente 'Telegram Bot ID' / Required: Only 'Telegram Bot ID'"
+                            data-bs-title="Required: Only BOT TOKEN"
                             onclick="prepareGetUpdates()">Get Updates</button>
 
                         <button class="btn btn-light" type="button" id="button-copy" data-bs-toggle="tooltip"
-                            data-bs-placement="left" data-bs-title="Copiar / Copy" disabled onclick="copy()">Copiar /
-                            Copy</button>
+                            data-bs-placement="left" data-bs-title="Copy" disabled
+                            onclick="copy()">Copy</button>
                     </div>
                 </div>
 
             </form>
             </br>
             <pre> <span id="form-response" class="form-text"></span>  </pre>
+
+            <div class="modal fade modal-dialog modal-lg" id="newbot" tabindex="-1" aria-labelledby="newbotModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="newbotModalLabel">New Bot</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/tutorial/bofather/newbot.png" class="img-fluid img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade modal-dialog modal-xl" id="getUpdates" tabindex="-1"
+                aria-labelledby="getUpdatesModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="getUpdatesModalLabel">Get Updates</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/tutorial/site/getUpdates.png" class="img-fluid img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="my-2 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017–2022 Renan Murtha</p>
+        <p class="mb-1">&copy; 2022 Renan Murtha</p>
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://github.com/renanmurtha/Telegram-Send-Message">Github</a></li>
+            <li class="list-inline-item"><a href="https://github.com/renanmurtha/Telegram-Send-Message">
+                    Code available on github</a></li>
+            <li class="list-inline-item"><a href="https://core.telegram.org/bots/tutorial#obtain-your-bot-token">
+                    TELEGRAM: Obtain Your Bot Token</a></li>
         </ul>
     </footer>
 

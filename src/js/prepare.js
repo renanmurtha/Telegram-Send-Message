@@ -49,6 +49,8 @@ function prepareGetUpdates() {
     btnCopy.className = "btn btn-light";
 
     responseSpan = document.getElementById("form-response");
+    responseSpan.style.fontSize = "20px"
+    
     botHomologacao = document.getElementById('idBot');
     if (botHomologacao.value.trim() == "" || botHomologacao.value.trim() == null || botHomologacao.value.trim() == undefined) {
         botHomologacao.focus();
